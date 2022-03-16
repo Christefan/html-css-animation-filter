@@ -60,15 +60,76 @@ background-color: red;
 .ex-11-icon:hover{
     animation-name: ruota2;
     animation-duration: 2s;
-    /* animation-duration: 0.1s; XD */
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-direction: alternate-reverse ;
+    transition: alternate-reverse 0.1ms;
 }
 @keyframes ruota2 {
     from {
-        transform:rotate(0deg);
+        transform:rotate(calc((3*360deg)/4));
     }
     to {
-        transform:rotate(calc((3*360deg)/4));
+        transform:rotate(0deg);
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: muovi-bottom-white 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes muovi-bottom-white {
+    from {
+      right :10%;
+    }
+    to {
+       right :60%;
+    }
+}
+.ex-12-button:hover .ex-12-top-white {
+    animation: muovi-top-white 2s linear; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes muovi-top-white {
+    from {
+        left:10%;
+    }
+    to {
+       left :60%;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: muovi-bottom-white 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes muovi-bottom-white {
+    from {
+      right :10%;
+    }
+    to {
+       right :60%;
+    }
+}
+.ex-13-button:hover .ex-13-top-white {
+    animation: muovi-top-white 2s linear; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes muovi-top-white {
+    from {
+        top: -10px;
+        left:100%;
+    }
+    45% {
+        left: 0;
+        top: 100%;
+    }
+    to {
+        left: 0;
+        top: 100%;
     }
 }
